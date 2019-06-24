@@ -4,6 +4,12 @@ export interface HttpResponse<T> extends AxiosResponse<T> {
 
 }
 
+export interface ApiResponse<T> {
+    count: number;
+    next: string;
+    previous: string;
+    results: Array<T>;
+}
 
 export default class HttpService {
 
