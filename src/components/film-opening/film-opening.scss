@@ -1,0 +1,19 @@
+
+.film-opening-container {
+  position: absolute;
+  top: 0;
+  left: 10rem;
+  width: 15rem;
+  height: 15rem;
+  overflow: hidden;
+  &.right {
+    left: -16rem;
+  }
+
+  .film-opening {
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    background-color: #29354c;
+    padding: 1rem;
+  }
+}

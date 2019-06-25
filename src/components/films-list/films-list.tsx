@@ -17,9 +17,9 @@ function FilmsList() {
     }, []);
 
     const renderFilms = () => {
-        return films.map((film:Film) => {
+        return films.map((film:Film, index: number) => {
             return (
-                <FilmItem key={film.url} film={film}/>
+                <FilmItem key={film.url} film={film} isOdd={index%2 !== 0}/>
             )
         });
     }
