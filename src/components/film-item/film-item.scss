@@ -1,0 +1,19 @@
+
+.film-item {
+  width: 7rem;
+  height: 7rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #2570ae;
+    color: white;
+  }
+}

@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import * as filmsService from './../../services/api/films/films.service';
 import {Film} from "../../models/film.model";
 import {ApiResponse, HttpResponse} from "../../services/api/http.service";
+import {FilmItem} from "../film-item/film-item";
+import './films-list.scss';
 
 function FilmsList() {
 
@@ -15,9 +17,9 @@ function FilmsList() {
     }, []);
 
     const renderFilms = () => {
-        return films.map((film:any) => {
+        return films.map((film:Film) => {
             return (
-                <div key={film.url}>{film.title}</div>
+                <FilmItem key={film.url} film={film}/>
             )
         });
     }
