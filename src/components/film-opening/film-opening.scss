@@ -3,17 +3,33 @@
   position: absolute;
   top: 0;
   left: 10rem;
-  width: 15rem;
-  height: 15rem;
+  width: 25rem;
+  height: 20rem;
+  perspective: 5rem;
   overflow: hidden;
-  &.right {
-    left: -16rem;
-  }
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  background: black;
+  padding: 1rem;
+  color: #feda4a;
+  font-weight: 600;
+  letter-spacing: 6px;
 
   .film-opening {
-    border: 1px solid lightblue;
-    border-radius: 5px;
-    background-color: #29354c;
-    padding: 1rem;
+    position: relative;
+    animation: crawl 360s linear;
+    transform-origin: 50% 0;
+
+  }
+}
+
+@keyframes crawl {
+  0% {
+    top: 300px;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
   }
 }
